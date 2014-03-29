@@ -10,8 +10,48 @@
     android:background="@drawable/startactivity" >
 
     <TextView
+        android:id="@+id/teamText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="37dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamText"
+        android:layout_marginTop="88dp"
+        android:layout_toRightOf="@+id/teamText"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/score1"
+        android:layout_below="@+id/score1"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score3"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/teamText"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/score4"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
 
 </RelativeLayout>

@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/seek1"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/teamText"
         android:layout_marginTop="20dp"
         android:max="2" />
 
@@ -51,13 +51,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/teamText"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:text="@string/numberofteams" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/teamText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seek1"
@@ -69,7 +69,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/teamText"
         android:layout_below="@+id/seek2"
         android:layout_marginTop="15dp"
         android:text="@string/duration" />

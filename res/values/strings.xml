@@ -27,5 +27,6 @@
     <string name="t2">Team 2 name</string>
     <string name="t3">Team 3 name</string>
     <string name="t4">Team 4 name</string>
+    <string name="current">press start when you are ready!</string>
 
 </resources>

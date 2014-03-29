@@ -13,6 +13,7 @@ public class gameSettings implements Serializable{
 	public String names[]; 
 	public int colors[];
 	public int scores[];
+	public int current;
 	
 	public gameSettings()
 	{
@@ -23,9 +24,14 @@ public class gameSettings implements Serializable{
 		names = new String[] {"Team1","Team2", "Team3", "Team4"};
 		colors = new int[4];
 		scores = new int[4];
+		for (int i=0;i<4;i++)
+		{
+			scores[i] = 0;
+		}
+		current = 0;
 	}
 	
-	public gameSettings(String lang, int diff, int dur, int no, String name[], int col[], int sc[])
+	public gameSettings(String lang, int diff, int dur, int no, String name[], int col[], int sc[], int cur)
 	{
 		language = lang;
 		difficulty = diff;
@@ -43,6 +49,7 @@ public class gameSettings implements Serializable{
 		{
 			scores[i]=sc[i];     			
 		}
+		current = cur;
 		
 	}
 }

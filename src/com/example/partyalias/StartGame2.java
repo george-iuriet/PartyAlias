@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 
 public class StartGame2 extends Activity {
@@ -33,6 +34,7 @@ public class StartGame2 extends Activity {
 	private EditText edit2;
 	private EditText edit3;
 	private EditText edit4;
+	private Button start;
 	
 	
 	@Override
@@ -44,10 +46,10 @@ public class StartGame2 extends Activity {
 		
 		Intent intent = getIntent();
 		 
-        // 2. get person object from intent
+        
         game = (gameSettings) intent.getSerializableExtra("Game");
 		
-        
+        start = (Button) findViewById(R.id.btnStart);
 		
 		btn1 = (ImageView) findViewById(R.id.team1);
 		btn2 = (ImageView) findViewById(R.id.team2);
@@ -72,6 +74,16 @@ public class StartGame2 extends Activity {
 				break;
 		}
 		
+		
+		start.setOnClickListener(new OnClickListener() {
+			  @Override
+			  public void onClick(View v) {
+				  load();			
+				  Intent gotoboard = new Intent(StartGame2.this, GameBoard.class);
+				  gotoboard.putExtra("Game", game);
+				  startActivity(gotoboard);
+			  }
+			});
 		
 		btn1.setOnClickListener(new OnClickListener() {
 			  @Override
@@ -265,6 +277,63 @@ public class StartGame2 extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	public void load()
+	{
+		btn1 = (ImageView) findViewById(R.id.team1);
+		btn2 = (ImageView) findViewById(R.id.team2);
+		btn3 = (ImageView) findViewById(R.id.team3);
+		btn4 = (ImageView) findViewById(R.id.team4);
+		
+
+		edit1 = (EditText) findViewById(R.id.name1);
+		edit2 = (EditText) findViewById(R.id.name2);
+		edit3 = (EditText) findViewById(R.id.name3);
+		edit4 = (EditText) findViewById(R.id.name4);
+		
+		switch (game.no_of_teams)
+		{
+		case 4: game.names[0] = edit1.getText().toString();
+				game.names[1] = edit2.getText().toString();
+				game.names[2] = edit2.getText().toString();
+				game.names[3] = edit2.getText().toString();
+				
+				ColorDrawable drawable = (ColorDrawable) btn1.getBackground();
+				game.colors[0] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn2.getBackground();
+				game.colors[1] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn3.getBackground();
+				game.colors[2] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn3.getBackground();
+				game.colors[3] = drawable.getColor();
+				break;
+				
+		case 3: game.names[0] = edit1.getText().toString();
+				game.names[1] = edit2.getText().toString();
+				game.names[2] = edit2.getText().toString();
+				drawable = (ColorDrawable) btn1.getBackground();
+				game.colors[0] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn2.getBackground();
+				game.colors[1] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn3.getBackground();
+				game.colors[2] = drawable.getColor();
+				
+				break;
+		case 2: game.names[0] = edit1.getText().toString();
+				game.names[1] = edit2.getText().toString();
+				drawable = (ColorDrawable) btn1.getBackground();
+				game.colors[0] = drawable.getColor();
+				
+				drawable = (ColorDrawable) btn2.getBackground();
+				game.colors[1] = drawable.getColor();
+				break;
+		}
+		
+	}
 	
 
 }
