@@ -18,5 +18,9 @@
     <string name="duration">Round duration</string>
     <string name="stringPass">Pass</string>
     <string name="stringCorrect">Correct</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="stringInstructions">
+        Alias is a game where the objective of the players is to explain words to each other, the only forbidden word in the explanations being the word to be explained. The game is played in teams of varying size, and fits well as a party game for larger crowds. Alias has been developed in Finland and is produced by Nelostuote Oy under the brand name Tactic. The game has been on the market since the early 1990s and is one of the most popular party games in Finland. The board in Alias is a path. The game is divided into turns of about one minute of length. The teams play in turns, and on each teams turn, one of the team members has to explain words on word cards to the other team members. The other team members can take guesses at the word only when the time expires, and words that have been correctly guessed earn the team one point. Explanation mistakes (meaning the explainer uses the word to be explained, part of it, or a derivative of it), and words passed over without being guessed take one point away. The players move on the board as many places as they have earned points on their turn. If, for example, the team lands on the number 7, the word to be explained from the cards is word number 7. The first team to reach the goal wins. The game is recommended for players over 7 years.
+    </string>
 
 </resources>

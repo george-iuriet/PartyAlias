@@ -24,6 +24,14 @@ public class StartActivity extends Activity {
             }
         });
 		
+		final Button Instructions = (Button) findViewById(R.id.btnInstructions);
+		Instructions.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent gotoInstr = new Intent(getBaseContext(), Instructions.class);
+                startActivity(gotoInstr);
+            }
+        });
+		
 		
 		
 		
