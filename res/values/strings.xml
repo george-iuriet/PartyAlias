@@ -4,5 +4,10 @@
     <string name="app_name">Party Alias</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_start_game1">StartGame1</string>
+    <string name="title_activity_start_game2">StartGame2</string>
+    <string name="title_activity_game_boar">GameBoar</string>
+    <string name="title_activity_game_board">GameBoard</string>
+    <string name="title_activity_play_game">PlayGame</string>
 
 </resources>

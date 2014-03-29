@@ -22,6 +22,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.partyalias.StartGame1"
+            android:label="@string/title_activity_start_game1"
+            android:parentActivityName="com.example.partyalias.StartActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.partyalias.StartActivity" />
+        </activity>
+        <activity
+            android:name="com.example.partyalias.StartGame2"
+            android:label="@string/title_activity_start_game2"
+            android:parentActivityName="com.example.partyalias.StartGame1" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.partyalias.StartGame1" />
+        </activity>
+        <activity
+            android:name="com.example.partyalias.GameBoar"
+            android:label="@string/title_activity_game_boar" >
+        </activity>
+        <activity
+            android:name="com.example.partyalias.GameBoard"
+            android:label="@string/title_activity_game_board" >
+        </activity>
+        <activity
+            android:name="com.example.partyalias.PlayGame"
+            android:label="@string/title_activity_play_game" >
+        </activity>
     </application>
 
 </manifest>
