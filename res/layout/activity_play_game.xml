@@ -9,9 +9,62 @@
     tools:context=".PlayGame"
     android:background="@drawable/startactivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/cardInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="8"
+        android:inputType="text"
+        android:enabled="false"
+        android:textSize="20sp"
+        android:textColor="#000000"
+         />
+
+    <EditText
+        android:id="@+id/scoreInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:ems="5"
+        android:inputType="text"
+        android:enabled="false"
+        android:textSize="15sp" 
+        android:textColor="#000000"
+    />
+
+    <Chronometer
+        android:id="@+id/roundChronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:format="%s"
+        android:textSize="40sp"
+         />
+
+    <Button
+        android:id="@+id/buttonPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scoreInput"
+        android:layout_alignBottom="@+id/scoreInput"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/scoreInput"
+        android:text="@string/stringPass" />
+
+    <Button
+        android:id="@+id/buttonCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scoreInput"
+        android:layout_alignBottom="@+id/scoreInput"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/scoreInput"
+        android:text="@string/stringCorrect" />
 
 </RelativeLayout>

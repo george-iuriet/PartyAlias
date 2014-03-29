@@ -16,5 +16,7 @@
     <string name="numberofteams">Number of teams</string>
     <string name="difficulty">Difficulty</string>
     <string name="duration">Round duration</string>
+    <string name="stringPass">Pass</string>
+    <string name="stringCorrect">Correct</string>
 
 </resources>
