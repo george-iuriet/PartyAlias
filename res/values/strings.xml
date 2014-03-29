@@ -13,5 +13,8 @@
     <string name="instructions">Instructions</string>
     <string name="share">Share</string>
     <string name="title_activity_scores">Scores</string>
+    <string name="numberofteams">Number of teams</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="duration">Round duration</string>
 
 </resources>

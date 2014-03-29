@@ -2,7 +2,10 @@ package com.example.partyalias;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class StartActivity extends Activity {
@@ -12,6 +15,18 @@ public class StartActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
 		Toast.makeText(getBaseContext(), "gie", Toast.LENGTH_LONG).show();
+		
+		final Button StartButton = (Button) findViewById(R.id.btnStart);
+		StartButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent goto2 = new Intent(getBaseContext(), StartGame1.class);
+                startActivity(goto2);
+            }
+        });
+		
+		
+		
+		
 	}
 
 	@Override
