@@ -18,34 +18,23 @@
         android:ems="8"
         android:inputType="text"
         android:enabled="false"
-        android:textSize="20sp"
+        android:textSize="60sp"
         android:textColor="#000000"
+        android:textAlignment="center"
          />
 
-    <EditText
+    <TextView
         android:id="@+id/scoreInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
-        android:ems="5"
-        android:inputType="text"
+        android:ems="2"
         android:enabled="false"
-        android:textSize="15sp" 
+        android:textSize="30sp" 
         android:textColor="#000000"
     />
-
-    <Chronometer
-        android:id="@+id/roundChronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:format="%s"
-        android:textSize="40sp"
-         />
 
     <Button
         android:id="@+id/buttonPass"
@@ -66,5 +55,19 @@
         android:layout_marginLeft="14dp"
         android:layout_toRightOf="@+id/scoreInput"
         android:text="@string/stringCorrect" />
+
+    <TextView
+        android:id="@+id/chronoMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="6" 
+        android:textSize="80sp" 
+        android:textColor="#000000">
+
+        <requestFocus />
+    </TextView>
 
 </RelativeLayout>
