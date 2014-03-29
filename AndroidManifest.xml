@@ -54,6 +54,14 @@
             android:name="com.example.partyalias.Scores"
             android:label="@string/title_activity_scores" >
         </activity>
+        <activity
+            android:name="com.example.partyalias.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.example.partyalias.StartActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.partyalias.StartActivity" />
+        </activity>
     </application>
 
 </manifest>
