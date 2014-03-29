@@ -19,7 +19,7 @@ public class StartGame1 extends Activity {
 		setContentView(R.layout.activity_start_game1);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		final Button StartButton = (Button) findViewById(R.id.button1);
+		final Button StartButton = (Button) findViewById(R.id.dialogButtonCancel);
 		StartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent goto3 = new Intent(getBaseContext(), StartGame2.class);

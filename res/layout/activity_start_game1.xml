@@ -40,7 +40,7 @@
         android:max="3" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/dialogButtonCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/SeekBar02"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBar1"
         android:layout_marginTop="16dp"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_toLeftOf="@+id/dialogButtonCancel"
         android:text="@string/difficulty" />
 
     <TextView

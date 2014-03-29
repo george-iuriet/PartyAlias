@@ -6,19 +6,60 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 
 public class StartGame2 extends Activity {
 
+	
+	final Context context = this;
+	private Button btn1;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start_game2);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		btn1 = (Button) findViewById(R.id.btnColor1);
+		
+		btn1.setOnClickListener(new OnClickListener() {
+			 
+			  @Override
+			  public void onClick(View arg0) {
+	 
+				// custom dialog
+				final Dialog dialog = new Dialog(context);
+				dialog.setContentView(R.layout.dialog);
+				dialog.setTitle("Choose the color");
+	 
+				
+				
+	 
+				Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+				// if button is clicked, close the custom dialog
+				dialogButton.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						dialog.dismiss();
+					}
+				});
+	 
+				dialog.show();
+			  }
+			});
+		
+		
 	}
 
 	/**
@@ -56,23 +97,5 @@ public class StartGame2 extends Activity {
 	}
 	
 	
-	@Override
-	public Dialog onCreateDialog(Bundle savedInstanceState) {
-	    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-	    builder.setTitle(R.string.pick_color)
-	           .setItems(R.array.colors_array, new DialogInterface.OnClickListener() {
-	               public void onClick(DialogInterface dialog, int which) {
-	               // The 'which' argument contains the index position
-	               // of the selected item
-	           }
-	    });
-	    return builder.create();
-	}
-
-	public void proba()
-	{
-		 AlertDialog alert11 = new AlertDialog(this);
-         alert11.show();
-	}
 
 }
