@@ -3,6 +3,7 @@ package com.example.partyalias;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.Toast;
 
 public class StartActivity extends Activity {
 
@@ -10,6 +11,7 @@ public class StartActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
+		Toast.makeText(getBaseContext(), "gie", Toast.LENGTH_LONG).show();
 	}
 
 	@Override
