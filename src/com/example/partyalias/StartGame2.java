@@ -2,10 +2,13 @@ package com.example.partyalias;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.DialogInterface;
 import android.os.Build;
 
 public class StartGame2 extends Activity {
@@ -50,6 +53,26 @@ public class StartGame2 extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+	    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+	    builder.setTitle(R.string.pick_color)
+	           .setItems(R.array.colors_array, new DialogInterface.OnClickListener() {
+	               public void onClick(DialogInterface dialog, int which) {
+	               // The 'which' argument contains the index position
+	               // of the selected item
+	           }
+	    });
+	    return builder.create();
+	}
+
+	public void proba()
+	{
+		 AlertDialog alert11 = new AlertDialog(this);
+         alert11.show();
 	}
 
 }
