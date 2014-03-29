@@ -44,15 +44,15 @@ public final class R {
         public static final int transparent=0x7f020002;
     }
     public static final class id {
-<<<<<<< HEAD
         public static final int LinearLayout2=0x7f090018;
         public static final int action_settings=0x7f090022;
         public static final int btnInstructions=0x7f090007;
         public static final int btnShare=0x7f090008;
         public static final int btnStart=0x7f090006;
-        public static final int buttonCorrect=0x7f090005;
-        public static final int buttonPass=0x7f090004;
+        public static final int buttonCorrect=0x7f090004;
+        public static final int buttonPass=0x7f090003;
         public static final int cardInput=0x7f090001;
+        public static final int chronoMeter=0x7f090005;
         public static final int color1=0x7f090019;
         public static final int color2=0x7f09001a;
         public static final int color3=0x7f09001b;
@@ -68,7 +68,6 @@ public final class R {
         public static final int name2=0x7f090011;
         public static final int name3=0x7f090012;
         public static final int name4=0x7f090013;
-        public static final int roundChronometer=0x7f090003;
         public static final int scoreInput=0x7f090002;
         public static final int seek1=0x7f090009;
         public static final int seek2=0x7f09000c;
@@ -80,36 +79,6 @@ public final class R {
         public static final int textView1=0x7f09000e;
         public static final int textView2=0x7f09000a;
         public static final int textView3=0x7f09000d;
-=======
-        public static final int EditText01=0x7f080012;
-        public static final int EditText02=0x7f080013;
-        public static final int LinearLayout2=0x7f080015;
-        public static final int SeekBar01=0x7f08000c;
-        public static final int SeekBar02=0x7f08000b;
-        public static final int action_settings=0x7f08001b;
-        public static final int btnColor1=0x7f080014;
-        public static final int btnInstructions=0x7f080007;
-        public static final int btnShare=0x7f080008;
-        public static final int btnStart=0x7f080006;
-        public static final int buttonCorrect=0x7f080005;
-        public static final int buttonPass=0x7f080004;
-        public static final int cardInput=0x7f080001;
-        public static final int color1=0x7f080016;
-        public static final int dialogButtonCancel=0x7f08000f;
-        public static final int dialogButtonOK=0x7f08001a;
-        public static final int editText1=0x7f080010;
-        public static final int editText2=0x7f080011;
-        public static final int imageView2=0x7f080019;
-        public static final int imageView3=0x7f080017;
-        public static final int imageView4=0x7f080018;
-        public static final int instructionsText=0x7f080000;
-        public static final int roundChronometer=0x7f080003;
-        public static final int scoreInput=0x7f080002;
-        public static final int seekBar1=0x7f080009;
-        public static final int textView1=0x7f08000e;
-        public static final int textView2=0x7f08000a;
-        public static final int textView3=0x7f08000d;
->>>>>>> 7afc9441c524300d823f535d1d8650148050d094
     }
     public static final class layout {
         public static final int activity_game_board=0x7f030000;
