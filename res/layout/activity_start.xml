@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".StartActivity" >
+    tools:context=".StartActivity"
+    android:background="@drawable/startactivity" >
 
     <Button
         android:id="@+id/btnStart"
