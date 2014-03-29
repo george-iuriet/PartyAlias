@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wordlist>
+	<language lang="ENGLISH">
+		<category categ="BEGINNER">
+			<word>RED</word>
+			<word>BLUE</word>
+			<word>YELLOW</word>
+			<word>GREEN</word>
+			<word>ORANGE</word>
+		</category>
+		<category categ="INTERMEDIATE">
+			<word>TABLE</word>
+			<word>HOUSE</word>
+			<word>ROOM</word>
+			<word>TV</word>
+			<word>LAPTOP</word>
+		</category>
+		<category categ="HARD">
+			<word>ABSTRACT</word>
+			<word>HAPPYNESS</word>
+			<word>COLD</word>
+			<word>PHOTOGRAPH</word>
+			<word>LIFE</word>
+		</category>
+	</language>
+	<language lang="ROMANIAN">
+		<category categ="BEGINNER">
+			<word>ROȘU</word>
+			<word>ALBASTRU</word>
+			<word>GALBEN</word>
+			<word>VERDE</word>
+			<word>PORTOCALIU</word>
+		</category>
+		<category categ="INTERMEDIATE">
+			<word>MASĂ</word>
+			<word>CASĂ</word>
+			<word>CAMERĂ</word>
+			<word>TELEVIZOR</word>
+			<word>LAPTOP</word>
+		</category>
+		<category categ="HARD">
+			<word>ABSTRACT</word>
+			<word>FERICIRE</word>
+			<word>RECE</word>
+			<word>FOTOGRAFIE</word>
+			<word>VIAȚĂ</word>
+		</category>
+	</language>
+</wordlist>
