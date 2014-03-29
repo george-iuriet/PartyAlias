@@ -11,7 +11,7 @@ public class StartActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
-		Toast.makeText(getBaseContext(), "gie", Toast.LENGTH_LONG).show();
+		//Toast.makeText(getBaseContext(), "gie", Toast.LENGTH_LONG).show();
 	}
 
 	@Override
