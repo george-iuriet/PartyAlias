@@ -43,9 +43,9 @@ public final class R {
         public static final int dialogButtonOK=0x7f08001a;
         public static final int editText1=0x7f080010;
         public static final int editText2=0x7f080011;
-        public static final int imageView2=0x7f080017;
-        public static final int imageView3=0x7f080018;
-        public static final int imageView4=0x7f080019;
+        public static final int imageView2=0x7f080019;
+        public static final int imageView3=0x7f080017;
+        public static final int imageView4=0x7f080018;
         public static final int instructionsText=0x7f080000;
         public static final int roundChronometer=0x7f080003;
         public static final int scoreInput=0x7f080002;
