@@ -9,5 +9,9 @@
     <string name="title_activity_game_boar">GameBoar</string>
     <string name="title_activity_game_board">GameBoard</string>
     <string name="title_activity_play_game">PlayGame</string>
+    <string name="start">Start game</string>
+    <string name="instructions">Instructions</string>
+    <string name="share">Share</string>
+    <string name="title_activity_scores">Scores</string>
 
 </resources>

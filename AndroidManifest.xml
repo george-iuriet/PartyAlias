@@ -50,6 +50,10 @@
             android:name="com.example.partyalias.PlayGame"
             android:label="@string/title_activity_play_game" >
         </activity>
+        <activity
+            android:name="com.example.partyalias.Scores"
+            android:label="@string/title_activity_scores" >
+        </activity>
     </application>
 
 </manifest>

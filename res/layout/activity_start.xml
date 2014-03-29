@@ -8,9 +8,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".StartActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/btnInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnStart"
+        android:layout_below="@+id/btnStart"
+        android:layout_marginTop="26dp"
+        android:text="@string/instructions" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnInstructions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/share" />
 
 </RelativeLayout>
