@@ -10,44 +10,49 @@
     android:background="@drawable/startactivity" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="47dp"
-        android:ems="10" >
+        android:ems="10"
+        android:hint="@string/t1"       >
 
-        <requestFocus />
+        <requestFocus/>
+        
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/name2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/name1"
+        android:layout_below="@+id/name1"
         android:layout_marginTop="23dp"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="@string/t2"  />
 
     <EditText
-        android:id="@+id/EditText01"
+        android:id="@+id/name3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/name2"
+        android:layout_below="@+id/name2"
         android:layout_marginTop="19dp"
-        android:ems="10" />
+        android:ems="10" 
+        android:hint="@string/t3" />
 
     <EditText
-        android:id="@+id/EditText02"
+        android:id="@+id/name4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditText01"
-        android:layout_below="@+id/EditText01"
+        android:layout_alignLeft="@+id/name3"
+        android:layout_below="@+id/name3"
         android:layout_marginTop="22dp"
-        android:ems="10" />
+        android:ems="10" 
+        android:hint="@string/t4" />
 
     <Button
         android:id="@+id/dialogButtonCancel"
@@ -58,12 +63,40 @@
         android:layout_marginBottom="59dp"
         android:text="@string/start" />
 
-    <Button
-        android:id="@+id/btnColor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/editText1"
-        android:text="Button" />
+     <ImageView
+         android:id="@+id/team2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/name3"
+         android:layout_alignLeft="@+id/team1"
+         android:background="@color/Brown"
+         android:src="@drawable/ic_launcher" />
+
+     <ImageView
+         android:id="@+id/team1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/name1"
+         android:layout_toRightOf="@+id/name1"
+         android:background="@color/Violet"
+         android:src="@drawable/ic_launcher" />
+
+     <ImageView
+         android:id="@+id/team3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/name4"
+         android:layout_alignLeft="@+id/team2"
+         android:background="@color/Orange"
+         android:src="@drawable/ic_launcher" />
+
+     <ImageView
+         android:id="@+id/team4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/name4"
+         android:layout_alignLeft="@+id/team3"
+         android:background="@color/Cyan"
+         android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

@@ -6,12 +6,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 
 public class StartGame1 extends Activity {
+	
+	gameSettings game;
+	SeekBar s1;
+	SeekBar s2;
+	SeekBar s3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +25,30 @@ public class StartGame1 extends Activity {
 		setContentView(R.layout.activity_start_game1);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		
 		final Button StartButton = (Button) findViewById(R.id.dialogButtonCancel);
 		StartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent goto3 = new Intent(getBaseContext(), StartGame2.class);
+            	 
+            	s1 = (SeekBar) findViewById(R.id.seek1);
+            	s2 = (SeekBar) findViewById(R.id.seek2);
+            	s3 = (SeekBar) findViewById(R.id.seek3);
+            	
+            	int no = s1.getProgress();
+            	int dif = s2.getProgress();
+            	int dur = s3.getProgress();
+            	
+            	
+            	
+                game = new gameSettings();
+                game.no_of_teams = no + 2;
+                game.difficulty = dif;
+                game.duration = dur;
+            	
+                Intent goto3 = new Intent(StartGame1.this, StartGame2.class);
+               
+                goto3.putExtra("Game", game);
                 startActivity(goto3);
             }
         });

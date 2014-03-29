@@ -10,40 +10,39 @@
     tools:context=".StartGame1" >
 
     <SeekBar
-        android:id="@+id/seekBar1"
+        android:id="@+id/seek1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="14dp"
-        android:max="4"
-        android:progress="2" />
+        android:max="2"
+        android:progress="0" />
 
     <SeekBar
-        android:id="@+id/SeekBar02"
+        android:id="@+id/seek3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/SeekBar01"
+        android:layout_alignLeft="@+id/seek2"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="16dp"
-        android:max="120" 
-        android:progress="60"
-        />
+        android:max="120"
+        android:progress="60" />
 
     <SeekBar
-        android:id="@+id/SeekBar01"
+        android:id="@+id/seek2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_alignLeft="@+id/seek1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="20dp"
-        android:max="3" />
+        android:max="2" />
 
     <Button
         android:id="@+id/dialogButtonCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/SeekBar02"
+        android:layout_below="@+id/seek3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
         android:text="@string/start" />
@@ -61,7 +60,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/seekBar1"
+        android:layout_below="@+id/seek1"
         android:layout_marginTop="16dp"
         android:layout_toLeftOf="@+id/dialogButtonCancel"
         android:text="@string/difficulty" />
@@ -71,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/SeekBar01"
+        android:layout_below="@+id/seek2"
         android:layout_marginTop="15dp"
         android:text="@string/duration" />
 
