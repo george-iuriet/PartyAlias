@@ -3,8 +3,11 @@ package com.example.partyalias;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,12 +15,24 @@ import android.widget.Button;
 
 public class StartActivity extends Activity {
 
-	public String language="ENGLISH";
+	SharedPreferences sharedpreferences;
+	public static final String MyPREFERENCES = "MyPrefs" ;
+	public String language;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
-		
+		sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+		if (sharedpreferences.contains("language"))
+	      {
+			
+	         language = sharedpreferences.getString("language", "");
+	      }
+		else
+		{
+			language="ENGLISH";
+		}
+
 		final Button StartButton = (Button) findViewById(R.id.btnStart);
 		StartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -41,10 +56,6 @@ public class StartActivity extends Activity {
             	showLanguageDialog();
             }
         });
-		
-		
-		
-		
 	}
 
 	@Override
@@ -93,9 +104,18 @@ public class StartActivity extends Activity {
                 				break;
                         }
                     	dialog.dismiss();
+                    	save();
                     }
                 });
         builderSingle.show();
+        
+	}
+	
+	public void save()
+	{
+	    Editor editor = sharedpreferences.edit();
+	    editor.putString("language", language);
+	    editor.commit(); 
 	}
 
 }
