@@ -294,8 +294,8 @@ public class StartGame2 extends Activity {
 		{
 		case 4: game.names[0] = edit1.getText().toString();
 				game.names[1] = edit2.getText().toString();
-				game.names[2] = edit2.getText().toString();
-				game.names[3] = edit2.getText().toString();
+				game.names[2] = edit3.getText().toString();
+				game.names[3] = edit4.getText().toString();
 				
 				ColorDrawable drawable = (ColorDrawable) btn1.getBackground();
 				game.colors[0] = drawable.getColor();
@@ -312,7 +312,7 @@ public class StartGame2 extends Activity {
 				
 		case 3: game.names[0] = edit1.getText().toString();
 				game.names[1] = edit2.getText().toString();
-				game.names[2] = edit2.getText().toString();
+				game.names[2] = edit3.getText().toString();
 				drawable = (ColorDrawable) btn1.getBackground();
 				game.colors[0] = drawable.getColor();
 				
