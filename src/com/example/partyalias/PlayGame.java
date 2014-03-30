@@ -15,6 +15,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import com.example.partyalias.XMLDOMParser;
+
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.widget.Button;
@@ -23,12 +25,14 @@ import android.widget.TextView;
 
 public class PlayGame extends Activity {
 
-	public String category = "BEGINNER";
-	public String language = "ENGLISH";
+	gameSettings game;
+	public String category;
+	public String language;
 	public String[] wordList;
 	public int wordNr;
-	public int score = 0;
-	public int duration = 15;
+	public int roundScore=0;
+	public int score;
+	public int duration;
 	
 	// XML node names
 	static final String ATTR_LANGUAGE = "lang";
@@ -41,13 +45,16 @@ public class PlayGame extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_game);
+		Intent intent = getIntent();       
+        game = (gameSettings) intent.getSerializableExtra("Game");
+        getGameSettings();
 		parseXMLfile();
 		writeScore();
 		generateWord();
 		final Button PassButton = (Button) findViewById(R.id.buttonPass);
 		PassButton.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
-	            score--;
+	        	roundScore--;
 	            writeScore();
 	            generateWord();
 	        }
@@ -56,7 +63,7 @@ public class PlayGame extends Activity {
 		final Button CorrectButton = (Button) findViewById(R.id.buttonCorrect);
 		CorrectButton.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
-	            score++;
+	        	roundScore++;
 	            writeScore();
 	            generateWord();
 	        }
@@ -122,7 +129,7 @@ public class PlayGame extends Activity {
 	public void writeScore()
 	{
 		TextView scoreInput = (TextView) findViewById(R.id.scoreInput);
-		scoreInput.setText(score + "");
+		scoreInput.setText(roundScore + "");
 		scoreInput.setGravity(Gravity.CENTER_HORIZONTAL);
 	}
 	
@@ -145,7 +152,8 @@ public class PlayGame extends Activity {
 		     }
 
 		     public void onFinish() {
-		    	 chronometerInput.setText("00:00");
+//		    	 chronometerInput.setText("00:00");
+		    	 finishRound();
 		    	 
 		    	 
 		     }
@@ -158,6 +166,34 @@ public class PlayGame extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.play_game, menu);
 		return true;
+	}
+	
+	void getGameSettings()
+	{
+		score=game.scores[game.current];
+        duration=game.duration;
+        language = game.language;
+        switch(game.difficulty)
+        {
+        case 0: category = "BEGINNER";
+        		break;
+        case 1: category = "INTERMEDIATE";
+				break;
+        	
+        case 2: category = "HARD";
+        		break;
+        }
+	
+	}
+	
+	void finishRound()
+	{
+		game.scores[game.current]=score+roundScore;
+		game.current++;
+		Intent gotoboard = new Intent(PlayGame.this, GameBoard.class);
+		gotoboard.putExtra("Game", game);
+		startActivity(gotoboard);
+		finish();
 	}
 
 }

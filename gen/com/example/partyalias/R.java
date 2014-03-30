@@ -44,6 +44,7 @@ public final class R {
         public static final int transparent=0x7f020002;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int LinearLayout2=0x7f09001f;
         public static final int action_settings=0x7f090029;
         public static final int btnInstructions=0x7f09000c;
@@ -86,6 +87,48 @@ public final class R {
         public static final int valDif=0x7f090015;
         public static final int valDur=0x7f090016;
         public static final int valNo=0x7f090014;
+=======
+        public static final int LinearLayout2=0x7f09001d;
+        public static final int action_settings=0x7f090027;
+        public static final int btnInstructions=0x7f090011;
+        public static final int btnShare=0x7f090012;
+        public static final int btnStart=0x7f090010;
+        public static final int buttonCorrect=0x7f09000e;
+        public static final int buttonPass=0x7f09000d;
+        public static final int buttonStart=0x7f090000;
+        public static final int cardInput=0x7f09000b;
+        public static final int chronoMeter=0x7f09000f;
+        public static final int color1=0x7f09001e;
+        public static final int color2=0x7f09001f;
+        public static final int color3=0x7f090020;
+        public static final int color4=0x7f090021;
+        public static final int color5=0x7f090022;
+        public static final int color6=0x7f090023;
+        public static final int color7=0x7f090024;
+        public static final int color8=0x7f090025;
+        public static final int dialogButtonCancel=0x7f090018;
+        public static final int dialogButtonOK=0x7f090026;
+        public static final int instructionsText=0x7f09000a;
+        public static final int name1=0x7f090006;
+        public static final int name2=0x7f090007;
+        public static final int name3=0x7f090008;
+        public static final int name4=0x7f090009;
+        public static final int score1=0x7f090002;
+        public static final int score2=0x7f090003;
+        public static final int score3=0x7f090004;
+        public static final int score4=0x7f090005;
+        public static final int scoreInput=0x7f09000c;
+        public static final int seek1=0x7f090013;
+        public static final int seek2=0x7f090016;
+        public static final int seek3=0x7f090015;
+        public static final int team1=0x7f09001a;
+        public static final int team2=0x7f090019;
+        public static final int team3=0x7f09001b;
+        public static final int team4=0x7f09001c;
+        public static final int teamText=0x7f090001;
+        public static final int textView2=0x7f090014;
+        public static final int textView3=0x7f090017;
+>>>>>>> 726fea3ee9f807928d22b1703315269fba2629dd
     }
     public static final class layout {
         public static final int activity_game_board=0x7f030000;

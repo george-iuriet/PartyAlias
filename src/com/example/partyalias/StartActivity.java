@@ -35,8 +35,7 @@ public class StartActivity extends Activity {
 		final Button Share = (Button) findViewById(R.id.btnShare);
 		Share.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent gotoShare = new Intent(getBaseContext(), PlayGame.class);
-                startActivity(gotoShare);
+                
             }
         });
 		

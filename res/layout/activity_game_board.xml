@@ -9,23 +9,33 @@
     tools:context=".GameBoard"
     android:background="@drawable/startactivity" >
 
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:text="@string/start" />
+
     <TextView
         android:id="@+id/teamText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="112dp"
-        android:layout_marginTop="37dp"
-        android:text="TextView" />
+        android:layout_alignRight="@+id/buttonStart"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/score1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/teamText"
-        android:layout_marginTop="88dp"
-        android:layout_toRightOf="@+id/teamText"
+        android:layout_marginRight="68dp"
+        android:layout_marginTop="38dp"
         android:text="TextView" />
 
     <TextView
@@ -34,24 +44,65 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/score1"
         android:layout_below="@+id/score1"
-        android:layout_marginTop="17dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/score4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/score3"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/teamText"
+        android:layout_marginTop="16dp"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/score3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/score4"
-        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/score2"
+        android:layout_below="@+id/score2"
+        android:layout_marginTop="15dp"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/score4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/score3"
+        android:layout_below="@+id/score3"
+        android:layout_marginTop="16dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/score1"
+        android:layout_alignBottom="@+id/score1"
+        android:layout_marginRight="48dp"
+        android:layout_toLeftOf="@+id/score1"
+        android:text="TextView"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/score2"
+        android:layout_alignBottom="@+id/score2"
+        android:layout_alignLeft="@+id/name1"
+        android:text="TextView"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/score4"
+        android:layout_alignLeft="@+id/name2"
+        android:text="TextView"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/score4"
+        android:layout_alignBottom="@+id/score4"
+        android:layout_alignLeft="@+id/name3"
+        android:text="TextView"
+        android:textStyle="bold" />
 
 </RelativeLayout>
