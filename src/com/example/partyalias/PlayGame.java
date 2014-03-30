@@ -240,8 +240,12 @@ public class PlayGame extends Activity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
+<<<<<<< HEAD
                     	finishRound();
 
+=======
+                        finishRound();
+>>>>>>> 49377adfd91a5092ad351485609e5179bacdd416
                     }
                 });
 
