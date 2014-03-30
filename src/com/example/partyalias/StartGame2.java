@@ -72,6 +72,7 @@ public class StartGame2 extends Activity {
 		case 3: btn4.setVisibility(View.GONE); 
 				edit4.setVisibility(View.GONE);
 				break;
+				
 		}
 		
 		
