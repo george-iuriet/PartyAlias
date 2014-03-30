@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -17,9 +18,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import com.example.partyalias.XMLDOMParser;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,7 +35,6 @@ public class PlayGame extends Activity {
 	public String[] wordList;
 	public int wordNr;
 	public int roundScore=0;
-	public int score;
 	public int duration;
 	
 	// XML node names
@@ -174,7 +176,8 @@ public class PlayGame extends Activity {
 
 		     public void onFinish() {
 		    	 chronometerInput.setText("00:00");
-		    	 finishRound();
+		    	 showFinalDialog();
+		    	 //finishRound();
 		    	 
 		    	 
 		     }
@@ -191,7 +194,6 @@ public class PlayGame extends Activity {
 	
 	void getGameSettings()
 	{
-		score=game.scores[game.current];
         duration=game.duration;
         language = game.language;
         switch(game.difficulty)
@@ -209,12 +211,60 @@ public class PlayGame extends Activity {
 	
 	void finishRound()
 	{
-		game.scores[game.current]=score+roundScore;
+		game.scores[game.current]=game.scores[game.current]+roundScore;
 		game.current++;
 		Intent gotoboard = new Intent(PlayGame.this, GameBoard.class);
 		gotoboard.putExtra("Game", game);
 		startActivity(gotoboard);
 		finish();
+	}
+	
+	void showFinalDialog()
+	{
+		AlertDialog.Builder builderSingle = new AlertDialog.Builder(
+                PlayGame.this);
+        builderSingle.setIcon(R.drawable.ic_launcher);
+        builderSingle.setTitle("Did any team give the correct answer?");
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+        		PlayGame.this,
+                android.R.layout.select_dialog_singlechoice);
+        arrayAdapter.add(game.names[0]);
+        arrayAdapter.add(game.names[1]);
+        if(game.no_of_teams==3)
+        	arrayAdapter.add(game.names[2]);
+        if(game.no_of_teams==4)
+        	arrayAdapter.add(game.names[3]);
+        builderSingle.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        builderSingle.setAdapter(arrayAdapter,
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    	switch(which)
+                        {
+                        case 0: game.scores[0]=game.scores[0]+1;
+                        		break;
+                        case 1: game.scores[1]=game.scores[1]+1;
+                				break;
+                        case 2: game.scores[2]=game.scores[2]+1;
+                        		break;
+                        case 3: game.scores[3]=game.scores[3]+1;
+                				break;
+                        }
+                    	
+                    	finishRound();
+                    	
+                    }
+                });
+        builderSingle.show();
 	}
 
 }
