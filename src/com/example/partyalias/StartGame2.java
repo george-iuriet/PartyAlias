@@ -339,11 +339,11 @@ public class StartGame2 extends Activity {
 		  if (edit1.getText().toString().equals(""))
 			 game.names[0] = "Team 1";
 		  if (edit2.getText().toString().equals(""))
-			  game.names[1] = "Team 1";
+			  game.names[1] = "Team 2";
 		  if (edit3.getText().toString().equals(""))
-			  game.names[2] = "Team 1";
+			  game.names[2] = "Team 3";
 		  if (edit4.getText().toString().equals(""))
-			  game.names[3] = "Team 1";
+			  game.names[3] = "Team 4";
 	}
 	
 

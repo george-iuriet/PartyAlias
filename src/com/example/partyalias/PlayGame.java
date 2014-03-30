@@ -152,7 +152,7 @@ public class PlayGame extends Activity {
 		     }
 
 		     public void onFinish() {
-//		    	 chronometerInput.setText("00:00");
+		    	 chronometerInput.setText("00:00");
 		    	 finishRound();
 		    	 
 		    	 
