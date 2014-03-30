@@ -22,6 +22,7 @@ public class StartGame1 extends Activity {
 	TextView val;
 	TextView di;
 	TextView du;
+	String language;
 	
 
 	@Override
@@ -31,39 +32,30 @@ public class StartGame1 extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
-		s1 = (SeekBar) findViewById(R.id.seek1);
-    	s2 = (SeekBar) findViewById(R.id.seek2);
-    	s3 = (SeekBar) findViewById(R.id.seek3);
+		Bundle extras = getIntent().getExtras();
+		  if (extras!=null)
+		   language = extras.getString("language");
+		
+			s1 = (SeekBar) findViewById(R.id.seek1);
+	    	s2 = (SeekBar) findViewById(R.id.seek2);
+	    	s3 = (SeekBar) findViewById(R.id.seek3);
 
-    	
-    	
-    	 s1.setOnSeekBarChangeListener(new list1());
-    	 s2.setOnSeekBarChangeListener(new list2());
-    	 s3.setOnSeekBarChangeListener(new list3());
-    	
-    	
-		
+	    	 s1.setOnSeekBarChangeListener(new list1());
+	    	 s2.setOnSeekBarChangeListener(new list2());
+	    	 s3.setOnSeekBarChangeListener(new list3());
+
 		final Button StartButton = (Button) findViewById(R.id.dialogButtonCancel);
-		
-		
+
 		StartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	 
-
             	int no = s1.getProgress();
             	int dif = s2.getProgress();
             	int dur = s3.getProgress();
-            	
-            	
-         
-
-            	
-            	
                 game = new gameSettings();
                 game.no_of_teams = no + 2;
                 game.difficulty = dif;
                 game.duration = dur;
-            	
+            	game.language = language;
                 Intent goto3 = new Intent(StartGame1.this, StartGame2.class);
                
                 goto3.putExtra("Game", game);

@@ -65,38 +65,39 @@
 
      <ImageView
          android:id="@+id/team2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
          android:layout_above="@+id/name3"
          android:layout_alignLeft="@+id/team1"
          android:background="@color/Brown"
-         android:src="@drawable/ic_launcher" />
+		 android:contentDescription="@string/tc" />
 
      <ImageView
          android:id="@+id/team1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
          android:layout_alignBottom="@+id/name1"
          android:layout_toRightOf="@+id/name1"
          android:background="@color/Violet"
-         android:src="@drawable/ic_launcher" />
+         android:contentDescription="@string/tc"
+          />
 
      <ImageView
          android:id="@+id/team3"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
          android:layout_above="@+id/name4"
          android:layout_alignLeft="@+id/team2"
          android:background="@color/Orange"
-         android:src="@drawable/ic_launcher" />
+         android:contentDescription="@string/tc" />
 
      <ImageView
          android:id="@+id/team4"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
          android:layout_alignBottom="@+id/name4"
          android:layout_alignLeft="@+id/team3"
          android:background="@color/Cyan"
-         android:src="@drawable/ic_launcher" />
+         android:contentDescription="@string/tc"/>
 
 </RelativeLayout>

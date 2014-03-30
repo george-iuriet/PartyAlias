@@ -67,8 +67,8 @@ public final class R {
         public static final int instructionsText=0x7f09000a;
         public static final int name1=0x7f090006;
         public static final int name2=0x7f090007;
-        public static final int name3=0x7f090008;
-        public static final int name4=0x7f090009;
+        public static final int name3=0x7f090009;
+        public static final int name4=0x7f090008;
         public static final int score1=0x7f090002;
         public static final int score2=0x7f090003;
         public static final int score3=0x7f090004;
