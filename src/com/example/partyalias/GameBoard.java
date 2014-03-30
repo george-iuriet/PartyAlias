@@ -64,12 +64,18 @@ public class GameBoard extends Activity {
 				n1.setText(game.names[0]);
         		n2.setText(game.names[1]);
         		n3.setText(game.names[2]);
+        		s4.setVisibility(View.GONE);
+        		n4.setVisibility(View.GONE);
 				break;
         	
         case 2: s1.setText(game.scores[0] + "");
         		s2.setText(game.scores[1] + "");
         		n1.setText(game.names[0]);
         		n2.setText(game.names[1]);
+        		s3.setVisibility(View.GONE);
+        		n3.setVisibility(View.GONE);
+        		s4.setVisibility(View.GONE);
+        		n4.setVisibility(View.GONE);
         		break;
         }
         
