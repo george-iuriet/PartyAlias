@@ -29,6 +29,7 @@ public class gameSettings implements Serializable{
 			scores[i] = 0;
 		}
 		current = 0;
+		
 	}
 	
 	public gameSettings(String lang, int diff, int dur, int no, String name[], int col[], int sc[], int cur)

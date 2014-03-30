@@ -78,7 +78,9 @@ public class StartGame2 extends Activity {
 		start.setOnClickListener(new OnClickListener() {
 			  @Override
 			  public void onClick(View v) {
-				  load();			
+				  load();	
+				 
+					 
 				  Intent gotoboard = new Intent(StartGame2.this, GameBoard.class);
 				  gotoboard.putExtra("Game", game);
 				  startActivity(gotoboard);
@@ -294,8 +296,8 @@ public class StartGame2 extends Activity {
 		{
 		case 4: game.names[0] = edit1.getText().toString();
 				game.names[1] = edit2.getText().toString();
-				game.names[2] = edit2.getText().toString();
-				game.names[3] = edit2.getText().toString();
+				game.names[2] = edit3.getText().toString();
+				game.names[3] = edit4.getText().toString();
 				
 				ColorDrawable drawable = (ColorDrawable) btn1.getBackground();
 				game.colors[0] = drawable.getColor();
@@ -312,7 +314,7 @@ public class StartGame2 extends Activity {
 				
 		case 3: game.names[0] = edit1.getText().toString();
 				game.names[1] = edit2.getText().toString();
-				game.names[2] = edit2.getText().toString();
+				game.names[2] = edit3.getText().toString();
 				drawable = (ColorDrawable) btn1.getBackground();
 				game.colors[0] = drawable.getColor();
 				
@@ -333,6 +335,15 @@ public class StartGame2 extends Activity {
 				break;
 		}
 		
+		 
+		  if (edit1.getText().toString().equals(""))
+			 game.names[0] = "Team 1";
+		  if (edit2.getText().toString().equals(""))
+			  game.names[1] = "Team 1";
+		  if (edit3.getText().toString().equals(""))
+			  game.names[2] = "Team 1";
+		  if (edit4.getText().toString().equals(""))
+			  game.names[3] = "Team 1";
 	}
 	
 

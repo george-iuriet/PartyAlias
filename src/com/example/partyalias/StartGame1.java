@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -18,6 +19,10 @@ public class StartGame1 extends Activity {
 	SeekBar s1;
 	SeekBar s2;
 	SeekBar s3;
+	TextView val;
+	TextView di;
+	TextView du;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +31,32 @@ public class StartGame1 extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
+		s1 = (SeekBar) findViewById(R.id.seek1);
+    	s2 = (SeekBar) findViewById(R.id.seek2);
+    	s3 = (SeekBar) findViewById(R.id.seek3);
+
+    	
+    	
+    	 s1.setOnSeekBarChangeListener(new list1());
+    	 s2.setOnSeekBarChangeListener(new list2());
+    	 s3.setOnSeekBarChangeListener(new list3());
+    	
+    	
 		
 		final Button StartButton = (Button) findViewById(R.id.dialogButtonCancel);
+		
+		
 		StartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	 
-            	s1 = (SeekBar) findViewById(R.id.seek1);
-            	s2 = (SeekBar) findViewById(R.id.seek2);
-            	s3 = (SeekBar) findViewById(R.id.seek3);
-            	
+
             	int no = s1.getProgress();
             	int dif = s2.getProgress();
             	int dur = s3.getProgress();
             	
+            	
+         
+
             	
             	
                 game = new gameSettings();
@@ -87,5 +105,58 @@ public class StartGame1 extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	private class list1 implements SeekBar.OnSeekBarChangeListener {
+
+        public void onProgressChanged(SeekBar seekBar, int progress,
+                boolean fromUser) {
+            int value = progress + 2;
+            val = (TextView) findViewById(R.id.valNo);
+            val.setText(""+ value);
+        }
+
+        public void onStartTrackingTouch(SeekBar seekBar) {}
+
+        public void onStopTrackingTouch(SeekBar seekBar) {}
+
+    }
+	private class list2 implements SeekBar.OnSeekBarChangeListener {
+
+        public void onProgressChanged(SeekBar seekBar, int progress,
+                boolean fromUser) {
+        	  di = (TextView) findViewById(R.id.valDif);   
+        	switch(progress)
+        	{
+        	case 0:  di.setText("Beginner");
+        			 break;
+        	case 1:  di.setText("Medium");
+        			 break;
+        	case 2:  di.setText("Hard");
+        			 break;
+        	}
+            
+           
+        }
+
+        public void onStartTrackingTouch(SeekBar seekBar) {}
+
+        public void onStopTrackingTouch(SeekBar seekBar) {}
+
+    }
+	private class list3 implements SeekBar.OnSeekBarChangeListener {
+
+        public void onProgressChanged(SeekBar seekBar, int progress,
+                boolean fromUser) {
+                            // Log the progress
+            du = (TextView) findViewById(R.id.valDur);
+            du.setText(progress + " s");
+        }
+
+        public void onStartTrackingTouch(SeekBar seekBar) {}
+
+        public void onStopTrackingTouch(SeekBar seekBar) {}
+
+    }
 
 }

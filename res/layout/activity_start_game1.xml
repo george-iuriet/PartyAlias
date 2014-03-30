@@ -74,4 +74,34 @@
         android:layout_marginTop="15dp"
         android:text="@string/duration" />
 
+    <TextView
+        android:id="@+id/valNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="2"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/valDif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/teamText"
+        android:layout_alignBottom="@+id/teamText"
+        android:layout_alignLeft="@+id/valNo"
+        android:text="Beginner"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/valDur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/valDif"
+        android:layout_alignTop="@+id/textView3"
+        android:text="60"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
