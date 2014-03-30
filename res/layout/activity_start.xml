@@ -34,6 +34,6 @@
         android:layout_below="@+id/btnInstructions"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:text="@string/share" />
+        android:text="@string/language" />
 
 </RelativeLayout>

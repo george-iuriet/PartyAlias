@@ -23,6 +23,7 @@ public class StartGame1 extends Activity {
 	TextView di;
 	TextView du;
 	String language;
+	boolean sound;
 	
 
 	@Override
@@ -34,7 +35,10 @@ public class StartGame1 extends Activity {
 		
 		Bundle extras = getIntent().getExtras();
 		  if (extras!=null)
+		  {
 		   language = extras.getString("language");
+		    sound = extras.getBoolean("sound");
+		  }
 		
 			s1 = (SeekBar) findViewById(R.id.seek1);
 	    	s2 = (SeekBar) findViewById(R.id.seek2);
@@ -56,6 +60,7 @@ public class StartGame1 extends Activity {
                 game.difficulty = dif;
                 game.duration = dur;
             	game.language = language;
+            	game.sound = sound;
                 Intent goto3 = new Intent(StartGame1.this, StartGame2.class);
                
                 goto3.putExtra("Game", game);

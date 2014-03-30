@@ -1,11 +1,14 @@
 package com.example.partyalias;
 
+
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,6 +16,9 @@ import android.widget.Button;
 public class StartActivity extends Activity {
 
 	public String language="ENGLISH";
+	public boolean sound = true;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,6 +29,7 @@ public class StartActivity extends Activity {
             public void onClick(View v) {
                 Intent goto2 = new Intent(getBaseContext(), StartGame1.class);
                 goto2.putExtra("language", language);
+                goto2.putExtra("sound", sound);
                 startActivity(goto2);
             }
         });
@@ -51,8 +58,37 @@ public class StartActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.start, menu);
+		
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        
+	        case R.id.action_share:
+	                // se da share
+	            return true;
+	        case R.id.action_sound:
+	        	if (sound==true)
+	        	{
+	        		item.setIcon(getResources().getDrawable(R.drawable.nosound));
+	        		sound = false;
+	        	}
+	        	else
+	        	{
+	        		item.setIcon(getResources().getDrawable(R.drawable.sound));
+	        		sound = true;
+	        	}
+	        	
+	        	return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	    
+	}
+	
 	
 	void showLanguageDialog()
 	{

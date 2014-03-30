@@ -1,14 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
         
-    <item android:id="@+id/action_language"
-          android:icon="@drawable/language"
-          android:title="@string/language"
-          android:showAsAction="ifRoom" />
     
-    <item android:id="@+id/action_sound"
+    
+     <item android:id="@+id/action_share"
+          android:icon="@drawable/share"
+          android:title="@string/share"
+          android:showAsAction="ifRoom" />
+     
+     
+     <item android:id="@+id/action_sound"
           android:icon="@drawable/sound"
           android:title="@string/sound"
           android:showAsAction="ifRoom" />
+   
 
 </menu>
