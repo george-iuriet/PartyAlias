@@ -1,5 +1,6 @@
 package com.example.partyalias;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
@@ -47,18 +48,28 @@ public class PlayGame extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play_game);
+		
+		
 		Intent intent = getIntent();       
         game = (gameSettings) intent.getSerializableExtra("Game");
         getGameSettings();
 		parseXMLfile();
 		writeScore();
 		generateWord();
+		
+		final MediaPlayer good = MediaPlayer.create(this, R.raw.ding);
+		final MediaPlayer wrong = MediaPlayer.create(this, R.raw.wrong);
+		 
+		
 		final Button PassButton = (Button) findViewById(R.id.buttonPass);
 		PassButton.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
+	        	
 	        	roundScore--;
 	            writeScore();
 	            generateWord();
+	            if (game.sound == true)
+	            wrong.start();
 	        }
 	    });
 		
@@ -68,11 +79,21 @@ public class PlayGame extends Activity {
 	        	roundScore++;
 	            writeScore();
 	            generateWord();
+	            if (game.sound == true)
+	            good.start();
 	        }
 	    });
 		startChronometer();
 		
 	}
+	
+	@Override
+	public void onBackPressed()
+	{
+
+	   // super.onBackPressed(); // Comment this super call to avoid calling finish()
+	}
+	
 
 	public void parseXMLfile()
 	{

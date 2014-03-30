@@ -14,8 +14,12 @@ public class gameSettings implements Serializable{
 	public int colors[];
 	public int scores[];
 	public int current;
+<<<<<<< HEAD
+	//public boolean sound;
+=======
 	public boolean sound;
 	
+>>>>>>> 98b0e9ceb5a0513609714eb46c22ef1dec44f93d
 	
 	public gameSettings()
 	{
